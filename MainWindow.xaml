@@ -1,0 +1,37 @@
+<Window x:Class="SleepWallpaper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sleep Wallpaper 1.0" Icon="SleepWallpaper.ico"
+        WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize"
+        Background="Black" Topmost="True"
+        Loaded="Window_Loaded" Closing="Window_Closing"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        MouseMove="Window_MouseMove">
+
+    <Window.ContextMenu>
+        <ContextMenu x:Name="Menu">
+            <MenuItem x:Name="NewItem" Header="New" InputGestureText="Ctrl+N">
+                <MenuItem Header="File picker..." Click="FilePicker_Click"/>
+                <MenuItem Header="Color picker..." Click="ColorPicker_Click"/>
+                <MenuItem Header="Screen color (eyedropper)..." Click="ScreenColor_Click"/>
+            </MenuItem>
+            <Separator/>
+            <MenuItem Header="Zoom in"  InputGestureText="Ctrl++" Click="ZoomIn_Click"/>
+            <MenuItem Header="Zoom out" InputGestureText="Ctrl+-" Click="ZoomOut_Click"/>
+            <Separator/>
+            <MenuItem Header="Close" InputGestureText="Ctrl+W" Click="Close_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+
+    <Grid ClipToBounds="True">
+        <Grid x:Name="Stage" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <ScaleTransform x:Name="Scale" ScaleX="1" ScaleY="1"/>
+            </Grid.RenderTransform>
+            <Image x:Name="Pic" Stretch="Uniform" Visibility="Collapsed"/>
+            <MediaElement x:Name="Vid" Stretch="Uniform" Visibility="Collapsed"
+                          LoadedBehavior="Manual" UnloadedBehavior="Manual"
+                          MediaEnded="Vid_MediaEnded" MediaFailed="Vid_MediaFailed"/>
+        </Grid>
+    </Grid>
+</Window>
