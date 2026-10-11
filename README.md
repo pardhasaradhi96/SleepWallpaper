@@ -85,7 +85,3 @@ Delete this file to reset the app to the default black screen.
 - Video playback depends on the codecs installed on your PC. MP4 (H.264) is the safest choice.
 - Videos are muted by default.
 - The app is for Windows only.
-
-## 📄 License
-
-Add a license of your choice (for example [MIT](https://choosealicense.com/licenses/mit/)).
