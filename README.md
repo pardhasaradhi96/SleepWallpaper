@@ -32,17 +32,14 @@
 ## 📥 Download
 
 Go to the [**Releases**](../../releases) page and download `SleepWallpaper.exe`.
-
 - Requires **Windows 10/11 (64-bit)**
-- If the app doesn't start, install the [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) (not needed for the self-contained build)
-- Windows SmartScreen may warn about an unsigned app. Click **More info → Run anyway**.
 
 ## 🛠️ Build from source
 
 Requirements: [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) on Windows.
 
 ```bash
-git clone https://github.com/<your-username>/SleepWallpaper.git
+git clone https://github.com/pardhasaradhi96/SleepWallpaper.git
 cd SleepWallpaper
 
 # run
